@@ -1,0 +1,52 @@
+// generator client configurado para o local padrão
+generator client {
+  provider = "prisma-client-js"
+}
+
+// datasource com a sintaxe correta para ler o .env
+datasource db {
+  provider = "postgresql"
+}
+
+enum TipoUsuario {
+  CLIENTE
+  ADMIN
+}
+
+
+model Usuario {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  cpf       String   @unique
+  nome      String?
+  senha     String
+  criadoEm  DateTime @default(now())
+}
+
+model Categoria {
+  id       Int       @id @default(autoincrement())    
+  nome     String    @unique
+  produtos Produto[]
+}
+
+model Produto {
+  id          Int      @id @default(autoincrement())
+  nome        String  
+  marca       String  
+  descricao   String?  @db.Text
+  preco       Decimal  @db.Decimal(10, 2)
+  estoque     Int      @default(0)
+  imageUrl    String? 
+  criadoEm    DateTime @default(now())
+
+  categoriaId Int       
+  categoria   Categoria @relation(fields: [categoriaId], references: [id])
+}
+
+model MensagemContato {
+  id         Int      @id @default(autoincrement())
+  nome       String    
+  email      String
+  mensagem   String   @db.Text
+  enviadoEm  DateTime @default(now())
+}
