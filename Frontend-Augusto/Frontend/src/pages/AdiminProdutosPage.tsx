@@ -1,3 +1,5 @@
+// AdiminProdutosPage.tsx
+// Página administrativa para gerenciar o catálogo de produtos e estoque.
 import { useState } from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
@@ -47,6 +49,7 @@ const NavItem = styled(Link)<{ $active?: boolean }>`
   }
 `;
 
+// Barra de busca para localizar produtos por nome, SKU ou característica.
 const SearchBar = styled.div`
   position: relative;
   margin-bottom: 40px;
@@ -82,6 +85,7 @@ const SearchBar = styled.div`
   }
 `;
 
+// Filtros rápidos para alternar entre categorias e exibir estoque baixo.
 const FilterTabs = styled.div`
   display: flex;
   gap: 4px;
@@ -114,6 +118,7 @@ const ProductGrid = styled.div`
   gap: 16px;
 `;
 
+// Cartões de produto no painel administrativo com ações de editar e deletar.
 const ProductAdminCard = styled.div`
   background: ${({ theme }) => theme.colors.surfaceContainerLow};
   border: 1px solid rgba(212,175,55,0.06);
@@ -241,11 +246,11 @@ const ProductAdminCard = styled.div`
 `;
 
 const navItems = [
-  { to: '/admin/relatorios', icon: 'bar_chart', label: 'Relatórios' },
-  { to: '/admin/produtos', icon: 'inventory_2', label: 'Produtos' },
-  { to: '/admin/pedidos', icon: 'receipt_long', label: 'Pedidos' },
-  { to: '/admin/clientes', icon: 'group', label: 'Clientes' },
-  { to: '/', icon: 'storefront', label: 'Ver Loja' },
+  { to: '/admin/relatorios', icon: '', label: 'Relatórios' },
+  { to: '/admin/produtos', icon: '', label: 'Produtos' },
+  { to: '/admin/pedidos', icon: '', label: 'Pedidos' },
+  { to: '/admin/clientes', icon: '', label: 'Clientes' },
+  { to: '/home', icon: '', label: 'Ver Loja' },
 ];
 
 const products = [

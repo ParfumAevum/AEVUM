@@ -1,3 +1,5 @@
+// EditarPerfilPage.tsx
+// Página de perfil do usuário. Permite visualizar e alterar informações pessoais.
 import styled from 'styled-components';
 import Navbar from './Navbar';
 import { PageContainer, PrimaryButton, GhostButton, TableInput } from '../components/UI';
@@ -23,6 +25,7 @@ const ProfileLayout = styled.div`
   }
 `;
 
+// Barra lateral com avatar e links internos de navegação de perfil.
 const Sidebar = styled.aside`
   padding: 48px;
 
@@ -99,6 +102,7 @@ const NavLinks = styled.nav`
   }
 `;
 
+// Área principal do conteúdo onde os formulários de edição são exibidos.
 const MainContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -159,6 +163,7 @@ const ActionRow = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 `;
 
+// Bloco de ação sensível para exclusão ou redefinição de conta.
 const DangerZone = styled.div`
   border: 1px solid rgba(255, 180, 171, 0.2);
   padding: 32px;

@@ -1,3 +1,5 @@
+// HistoricoPedidosPage.tsx
+// Página que lista pedidos antigos do usuário e exibe status de compras anteriores.
 import styled from 'styled-components';
 import Navbar from './Navbar';
 import { PageContainer, GhostButton } from '../components/UI';
@@ -16,6 +18,7 @@ const PageWrapper = styled.div`
   }
 `;
 
+// Cabeçalho da página de histórico com título e resumo de pedidos.
 const PageHero = styled.section`
   margin-bottom: 80px;
 
@@ -36,6 +39,7 @@ const PageHero = styled.section`
   }
 `;
 
+// Linha de filtros que permite alternar entre diferentes estados de pedidos.
 const FilterRow = styled.div`
   display: flex;
   gap: 16px;
@@ -62,6 +66,7 @@ const FilterChip = styled.button<{ $active?: boolean }>`
   }
 `;
 
+// Lista de pedidos renderizada como cartões de histórico.
 const OrderList = styled.div`
   display: flex;
   flex-direction: column;

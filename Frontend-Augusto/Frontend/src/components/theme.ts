@@ -1,3 +1,6 @@
+// theme.ts
+// Este arquivo fornece as definições de tema usadas pela aplicação.
+// Ele centraliza cores, fontes e espaçamentos para consistência visual.
 export const theme = {
   colors: {
     background: '#0A0A0A',

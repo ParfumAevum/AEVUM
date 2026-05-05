@@ -1,7 +1,10 @@
+// AdminRelatoriosPage.tsx
+// Dashboard administrativo com relatórios, indicadores e painel lateral de navegação.
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import { PageContainer, AdminSidebar, AdminContent, StatCard, LabelCaps } from '../components/UI';
 
+// Cabeçalho do menu lateral com marca do painel administrativo.
 const SidebarLogo = styled.div`
   padding: 0 32px 40px;
   border-bottom: 1px solid rgba(212,175,55,0.1);
@@ -49,6 +52,7 @@ const NavItem = styled(Link)<{ $active?: boolean }>`
   }
 `;
 
+// Grade de cartões com KPIs e métricas rápidas.
 const StatsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -128,11 +132,11 @@ const GeoBar = styled.div<{ $pct: number }>`
 `;
 
 const navItems = [
-  { to: '/admin/relatorios', icon: 'bar_chart', label: 'Relatórios' },
-  { to: '/admin/produtos', icon: 'inventory_2', label: 'Produtos' },
-  { to: '/admin/pedidos', icon: 'receipt_long', label: 'Pedidos' },
-  { to: '/admin/clientes', icon: 'group', label: 'Clientes' },
-  { to: '/', icon: 'storefront', label: 'Ver Loja' },
+  { to: '/admin/relatorios', icon: '', label: 'Relatórios' },
+  { to: '/admin/produtos', icon: '', label: 'Produtos' },
+  { to: '/admin/pedidos', icon: '', label: 'Pedidos' },
+  { to: '/admin/clientes', icon: '', label: 'Clientes' },
+  { to: '/home', icon: '', label: 'Ver Loja' },
 ];
 
 export default function AdminRelatoriosPage() {

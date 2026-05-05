@@ -1,7 +1,10 @@
+// FinalizarCompraPage.tsx
+// Página de checkout. Exibe formulário de pagamento, resumo do pedido e opções de forma de pagamento.
 import styled from 'styled-components';
 import Navbar from './Navbar';
 import { PageContainer, PrimaryButton } from '../components/UI';
 
+// Layout de checkout dividindo formulário de pagamento e resumo do pedido.
 const CheckoutLayout = styled.div`
   padding-top: 128px;
   padding-bottom: 96px;
@@ -23,6 +26,7 @@ const CheckoutLayout = styled.div`
   }
 `;
 
+// Seção usada para campos de pagamento e detalhes do pedido.
 const FormSection = styled.section`
   margin-bottom: 64px;
 
@@ -135,6 +139,7 @@ const SaveCardRow = styled.label`
 
 // ─── Order Summary ─────────────────────────────────────────────────────────────
 
+// Painel fixo à direita com resumo de valores e itens do pedido.
 const SummaryCard = styled.aside`
   background: ${({ theme }) => theme.colors.surfaceContainerLow};
   border: 1px solid rgba(212,175,55,0.08);

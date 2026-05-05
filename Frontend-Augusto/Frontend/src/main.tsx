@@ -1,3 +1,6 @@
+// main.tsx
+// Este arquivo inicializa o React e injeta o aplicativo no elemento root do HTML.
+// Ele também aplica o tema e os estilos globais de styled-components.
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';

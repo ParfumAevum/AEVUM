@@ -1,3 +1,7 @@
+// LoginPage.tsx
+// Página de autenticação do usuário. Contém formulário de login e validação simples.
+// LoginPage.tsx
+// Página de autenticação do usuário. Contém formulário de login e validação simples.
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import styled from 'styled-components';
 import { Link, useNavigate } from 'react-router-dom';
@@ -9,6 +13,7 @@ import {
   Logo,
 } from '../components/UI';
 
+// Container principal do login, com layout de duas colunas para desktop.
 const LoginWrapper = styled.main`
   min-height: 100vh;
   display: flex;
@@ -99,13 +104,6 @@ const ForgotLink = styled.a`
   }
 `;
 
-const LabelRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 8px;
-`;
-
 const Divider = styled.div`
   display: flex;
   align-items: center;
@@ -173,6 +171,7 @@ export default function LoginPage() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  // Validação simples de login para demonstrar fluxo de autenticação.
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -241,10 +240,7 @@ export default function LoginPage() {
             </HairlineInputWrapper>
 
             <HairlineInputWrapper>
-              <LabelRow>
-                <HairlineLabel as="span">Senha</HairlineLabel>
-                <ForgotLink href="#">ESQUECI MINHA SENHA</ForgotLink>
-              </LabelRow>
+              <HairlineLabel htmlFor="password">Senha</HairlineLabel>
               <HairlineInput
                 id="password"
                 type="password"
@@ -252,6 +248,8 @@ export default function LoginPage() {
                 onChange={(event: ChangeEvent<HTMLInputElement>) => setPassword(event.target.value)}
                 placeholder="••••••••"
               />
+              {/* Link de recuperação de senha abaixo do campo de senha */}
+              <ForgotLink href="#">ESQUECI MINHA SENHA</ForgotLink>
             </HairlineInputWrapper>
 
             {error ? (
@@ -263,7 +261,7 @@ export default function LoginPage() {
             <div style={{ paddingTop: 24 }}>
               <PrimaryButton type="submit" style={{ width: '100%', justifyContent: 'center' }}>
                 ENTRAR
-                <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_right_alt</span>
+                <span className="material-symbols-outlined" style={{ fontSize: 18 }}></span>
               </PrimaryButton>
             </div>
           </Form>

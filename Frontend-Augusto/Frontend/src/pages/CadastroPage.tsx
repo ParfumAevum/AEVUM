@@ -1,3 +1,5 @@
+// CadastroPage.tsx
+// Página de cadastro de novos clientes. Contém formulário de registro e informações visuais.
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import {
@@ -8,6 +10,7 @@ import {
   Logo,
 } from '../components/UI';
 
+// Container principal do cadastro com imagem de fundo e layout centralizado.
 const Wrapper = styled.div`
   min-height: 100vh;
   width: 100%;
@@ -19,6 +22,7 @@ const Wrapper = styled.div`
   overflow: hidden;
 `;
 
+// Camada de imagem de fundo para enriquecer visualmente a página.
 const BgImage = styled.div`
   position: absolute;
   inset: 0;
@@ -67,6 +71,7 @@ const EditorialQuote = styled.div`
   }
 `;
 
+// Card principal do formulário de cadastro com vidro fosco e borda suave.
 const FormCard = styled.section`
   position: relative;
   z-index: 20;
