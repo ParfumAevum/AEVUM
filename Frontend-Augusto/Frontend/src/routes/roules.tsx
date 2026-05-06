@@ -1,3 +1,5 @@
+// roules.tsx
+// Contém as rotas da aplicação e os componentes que serão exibidos para cada caminho.
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from '../pages/LoginPage';
 import HomePage from '../pages/HomePage';
@@ -7,6 +9,8 @@ import FinalizarCompraPage from '../pages/FinalizarCompraPage';
 import HistoricoPedidosPage from '../pages/HistoricoPedidosPage';
 import AdminRelatoriosPage from '../pages/AdminRelatoriosPage';
 import AdiminProdutosPage from '../pages/AdiminProdutosPage';
+import AdminPedidosPage from '../pages/AdminPedidosPage';
+import AdminClientesPage from '../pages/AdminClientesPage';
 
 export default function Roules() {
   return (
@@ -23,6 +27,8 @@ export default function Roules() {
         <Route path="/admin" element={<Navigate to="/admin/relatorios" replace />} />
         <Route path="/admin/relatorios" element={<AdminRelatoriosPage />} />
         <Route path="/admin/produtos" element={<AdiminProdutosPage />} />
+        <Route path="/admin/pedidos" element={<AdminPedidosPage />} />
+        <Route path="/admin/clientes" element={<AdminClientesPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

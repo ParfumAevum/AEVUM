@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+// UI.ts
+// Componentes estilizados compartilhados em toda a aplicação.
+// Inclui tipografia, botões, inputs, layout de navegação e cards.
+
 // ─── Typography ────────────────────────────────────────────────────────────────
 
 export const DisplayXL = styled.h1`
